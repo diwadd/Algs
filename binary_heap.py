@@ -25,6 +25,7 @@ def right(i):
     """
     return 2 * i + 2
     
+
 def max_heapify(a, i):
     """"
     Intorduction to algorithms 3rd ed.
@@ -39,11 +40,13 @@ def max_heapify(a, i):
     largest = None
     
     # Python lists are dynamic so a.heap-size = len(a)
-    if le <= len(a) and a[le] > a[i]:
+    # For arrays indexed from 1 le <= len(a)
+    if le < len(a) and a[le] > a[i]:
         largest = le
     else:
         largest = i
-    if ri <= len(a) and a[ri] > a[largest]:
+    # For arrays indexed from 1 ri <= len(a)
+    if ri < len(a) and a[ri] > a[largest]:
         largest = ri
     if largest != i:
         # exchange a[i] with a[largest]
@@ -51,10 +54,19 @@ def max_heapify(a, i):
         a[i] = a[largest]
         a[largest] = b
         max_heapify(a, largest)
+
+
+def build_max_heap(a):
+    """
+    Transform an array into a heap.
+
+    :param a: An array.
+
+    """
+    for i in range(math.floor((len(a) - 1)/2), -1, -1):
+        max_heapify(a, i)
     
-    
-    
-    
+
     
     
     
