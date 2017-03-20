@@ -3,24 +3,27 @@ import math
 def parent(i):
     """
     Return parent of node i.
+    For arrays indexed from 1 to N floor(i/2).
     :param i: node index
     :return: parent index
     """
-    return math.floor(i/2)
+    return math.floor((i - 1) / 2)
 
     
 def left(i):
     """
     Return the left child of nod with index i.
+    For arrays indexed from 1 to N 2 * i.
     """
-    return 2*i
+    return 2 * i + 1
  
  
 def right(i):
     """
     Return the right child of nod with index i.
+    For arrays indexed from 1 to N 2 * i + 1.
     """
-    return 2*i + 1
+    return 2 * i + 2
     
 def max_heapify(a, i):
     """"
