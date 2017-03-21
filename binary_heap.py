@@ -2,6 +2,10 @@ import math
 
 
 class Array(list):
+    """
+    An array with an additional parameter is
+    needed that will track the heap size.
+    """
     def __init__(self, *args):
         list.__init__(self, *args)
         self.heap_size = len(self)
