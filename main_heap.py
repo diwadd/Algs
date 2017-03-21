@@ -1,5 +1,5 @@
 import binary_heap as bh
-
+import priority_queue as pq
 
 
 a = bh.Array([16, 4, 10, 14, 7, 9, 3, 2, 8, 1])
@@ -22,14 +22,18 @@ print(b)
 bh.build_max_heap(b)
 print(b)
 
-
-c = bh.Array([5,4,2,7,4,37,8,7])
-print(c)
-bh.heapsort(c)
-print(c)
+print(pq.heap_extract_max(b))
 
 
+print(b)
+print(len(b))
+print(b.heap_size)
 
-h = bh.Array([1,2,3,4,5,6])
-print(h)
-print(h.heap_size)
+#c = bh.Array([5,4,2,7,4,37,8,7])
+#print(c)
+#bh.heapsort(c)
+#print(c)
+
+#h = bh.Array([1,2,3,4,5,6])
+#print(h)
+#print(h.heap_size)

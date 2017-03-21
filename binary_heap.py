@@ -100,6 +100,8 @@ def heapsort(a):
         a[0], a[i] = a[i], a[0]
         a.heap_size = a.heap_size - 1
         max_heapify(a, 0)
+
+    a.heap_size = len(a)
         
     
 
