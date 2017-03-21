@@ -7,12 +7,6 @@ class Array(list):
         self.heap_size = len(self)
 
 
-def exchange(a, b):
-    t = a
-    a = b
-    b = t
-
-
 def parent(i):
     """
     Return parent of node i.

@@ -1,4 +1,4 @@
-import binary_heap as bh
+import ads.binary_heap as bh
 
 
 
