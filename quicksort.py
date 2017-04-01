@@ -50,7 +50,6 @@ def quicksort(a, p, r):
     :param r: Index in a.
     """
 
-
     if p < r:
         q = partition(a, p, r)
         quicksort(a, p, q - 1)

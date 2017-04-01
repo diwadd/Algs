@@ -25,11 +25,12 @@ class Node:
 class BinarySearchTree:
 
     def __init__(self):
-        self.root = Node()
+        self.root = None
+
         
     def tree_insert(self, node):
         """
-        Insert a new node with value z into the tree.
+        Insert a new node into the tree.
         """
     
         y = None
@@ -51,7 +52,30 @@ class BinarySearchTree:
         
         else:
             y.right = node
- 
+
+
+    def tree_minimum(self, x):
+
+        while x.left != None:
+            x = x.left
+        return x
+
+
+    def tree_maximum(self, x):
+
+        while x.right != None:
+            x = x.right
+        return x
+
+
+    def inorder_tree_walk(self, x):
+
+        if (x != None):
+            self.inorder_tree_walk(x.left)
+            print(str(x.key) + " ")
+            self.inorder_tree_walk(x.right)
+
+
 if __name__ == '__main__':
 
     n = Node()
