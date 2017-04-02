@@ -70,10 +70,34 @@ class BinarySearchTree:
 
     def inorder_tree_walk(self, x):
 
+        walk = []
         if (x != None):
             self.inorder_tree_walk(x.left)
-            print(str(x.key) + " ")
+            walk.append(x.key)
             self.inorder_tree_walk(x.right)
+
+        return walk
+
+    def tree_search(self, x, key):
+
+        if (x == None) or (key == x.key):
+            return x
+
+        if (key < x.key):
+            return self.tree_search(x.left, key)
+        else:
+            return self.tree_search(x.right, key)
+
+
+    def iterative_tree_search(self, x, key):
+        
+        while (x != None) and (key != x.key):
+            if (key < x.key):
+                x = x.left
+            else:
+                x = x.right
+
+        return x
 
 
 if __name__ == '__main__':
