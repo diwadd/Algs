@@ -48,7 +48,7 @@ def heap_increase_key(a, i, key):
 
 
     if key < a[i]:
-        return ValueError
+        raise ValueError
 
     a[i] = key
     while i > 0 and a[bh.parent(i)] < a[i]:

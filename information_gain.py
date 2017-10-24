@@ -77,32 +77,21 @@ def remaining_entropy(ft):
     return rh
 
 
+def information_gain(ft):
+
+    h = shannon_entropy(ft[:, 1])
+    rh = remaining_entropy(ft)
+    return h - rh
+
 
 if __name__ == "__main__":
 
-    ft = [[0, 1],
-          [1, 1],
-          [1, 1],
-          [1, 0],
-          [0, 0],
-          [0, 0]]
-
-    """
-    ft = [[1, 1],
-          [0, 1],
-          [0, 1],
-          [1, 0],
-          [0, 0],
-          [0, 0]]
-    """
-
     ft = [[1, 1],
           [1, 1],
           [1, 1],
           [0, 0],
           [0, 0],
           [0, 0]]
-
 
     ft = np.array(ft)
     h = shannon_entropy(ft[:, 1])
